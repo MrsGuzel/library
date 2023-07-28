@@ -7,8 +7,13 @@ const Footer = () => {
   const { myTheme, setMyTheme } = useThemeContext();
 
   const handleClick =() => {
-    
-  }
+    // if(myTheme === "light") {
+    //   setMyTheme("dark")
+    // }else{
+    //   setMyTheme("light")
+    // }
+    setMyTheme((prev)=> (prev === "light" ? "dark" : "light"));
+  };
 
   return (
     < FooterContainer>
@@ -17,6 +22,6 @@ const Footer = () => {
       </FooterBtn>     
     </ FooterContainer>
   );
-}
+};
 
-export default footer
+export default Footer;

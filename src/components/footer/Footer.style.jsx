@@ -5,11 +5,11 @@ export const FooterContainer = styled.div`
 `;
 
 export const FooterBtn = styled.button`
-  /* border: none;
+   border: none;
   outline: none;
   background: none;
   cursor: pointer;
   position: fixed;
   bottom: 0px;
-  padding: 1rem; */
+  padding: 1rem;
 `;
