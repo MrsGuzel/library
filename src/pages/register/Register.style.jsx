@@ -1,7 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const A = styled.a`
-  /* ... */
+export const RegisterContainer = styled.div`
+  width: 100%;
+  text-align: center;
 `;
 
-export default A;
+export const RegisterImage = styled.img`
+  width: 80%;
+  padding: 3rem;
+`;

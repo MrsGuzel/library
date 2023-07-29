@@ -13,13 +13,11 @@ padding: 1rem 0;
 text-decoration: none;
 font-weight: 800;
 font-size: 2rem;
-color: ${({ theme }) => theme.colors.LogoColor} ;
+color: ${({ theme }) => theme.colors.LogoColor};
 transition: color 0.8sn;
 :hover{
-  color: ${({ theme }) => theme.colors.linkHoverColor} ;
+  color: ${({ theme }) => theme.colors.linkHoverColor};
 }
-
-
 `;
 
 export const HamburgerIcon = styled.div`
@@ -29,7 +27,6 @@ cursor: pointer;
   {
     display: block;
   }
-
 `;
 
 export const Menu = styled(Flex)`
@@ -37,14 +34,13 @@ export const Menu = styled(Flex)`
   {
     flex-direction: column;
     width: 100%;
-    transition: all 0.8sn;
+    transition: all 1sn;
     max-height: ${({showMenu}) => (showMenu ? "330px" : "0px")};
     overflow: hidden;
   }
-
 `;
 
-export const MenuLink = styled.div(NavLink)`
+export const MenuLink = styled(NavLink)`
 text-align: center;
 padding: 1rem 2rem;
 cursor: pointer;

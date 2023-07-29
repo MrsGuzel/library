@@ -4,22 +4,23 @@ import {lightTheme, darktheme } from "./styles/theme";
 import { GlobalStyles } from "./styles/Global.style";
 import { useThemeContext } from "./context/ThemeContext";
 import AuthContextProvider from "./context/AuthContext";
+import BooksContextProvider from "./context/BooksContext";
 
 function App() {
-  const {myTheme} = useThemeContext()
+  const {myTheme} = useThemeContext();
   const themes = myTheme === "light" ? lightTheme : darktheme
   return (
     <>
   <ThemeProvider theme = {themes}>
   <GlobalStyles/>
     <AuthContextProvider>
-      <AppRouter/>
+      <BooksContextProvider>
+        <AppRouter/>
+      </BooksContextProvider>
     </AuthContextProvider>
-    
   </ ThemeProvider>
     </>
-
     );
-}
+};
 
 export default App;

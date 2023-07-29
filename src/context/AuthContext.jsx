@@ -1,10 +1,13 @@
-import { createContext, useState, useContext} from "react";
+import { createContext, useState, useContext, useEffect} from "react";
 
 const AuthContext = createContext();
 
 const AuthContextProvider = ({children}) =>{
-    const [user, setUser] = useState("false");
+    const [user, setUser] = useState( sessionStorage.getItem("user") || false);
 
+    useEffect(() => {
+        sessionStorage.setItem("user", user);
+      }, [user]); 
 
     return(
         <AuthContext.Provider value = {{user, setUser}}>
@@ -14,7 +17,7 @@ const AuthContextProvider = ({children}) =>{
 };
 
 export const useAuthContext = () => {
-    return useContext(AuthContext)
-}
+  return useContext(AuthContext);
+};
 
 export default AuthContextProvider;
