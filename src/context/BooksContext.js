@@ -4,8 +4,7 @@ import axios from "axios";
 const BooksContext = createContext();
 
 const BooksContextProvider = ({ children }) => {
-  //   const [query, setQuery] = useState("");
-  //   const [selectType, setSelectType] = useState("all");
+ ;
   const [searchInfo, setSearchInfo] = useState({
     query: "",
     selectType: "all",
@@ -16,7 +15,6 @@ const BooksContextProvider = ({ children }) => {
   console.log(APP_KEY);
 
   const getData = async () => {
-    // const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&printType=${selectType}&key=${APP_KEY}`;
     const url = `https://www.googleapis.com/books/v1/volumes?q=${searchInfo.query}&printType=${searchInfo.selectType}&key=${APP_KEY}`;
     try {
       const { data } = await axios(url);
